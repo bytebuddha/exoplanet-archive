@@ -1,0 +1,15 @@
+[package]
+name = "exoplanets"
+version = "0.1.0"
+authors = ["Patrick Greene <pmg41494@protonmail.com>"]
+edition = "2018"
+
+[dependencies]
+reqwest = "*"
+serde = "1.0.90"
+serde_derive = "1.0.90"
+serde_json = "*"
+
+[dependencies.chrono]
+version = "*"
+features = ["serde"]
