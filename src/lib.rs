@@ -1,12 +1,11 @@
-//! # exoplanet
+//! # exoplanet-archive
 //!
-//! Library for parsing data from [exoplanet archive API](https://exoplanetarchive.ipac.caltech.edu)
+//! Unofficial Library for parsing data from [exoplanet archive API](https://exoplanetarchive.ipac.caltech.edu)
 //!
 //! ## Requirements
-//! - This library uses [native-tsl](https://crates.io/crates/native-tls) when fetching data, witch
-//!   required openssl be installed.
+//! - This library uses [native-tsl](https://crates.io/crates/native-tls) when fetching data, making
+//!   openssl neccessary.
 //!
-//! ## Ussge
 //! - #### [Records](records)
 //!     Records are the most basic representation of the exoplanet data. They
 //!     implement the `ApiEndpoint` to retrieve data from the api.

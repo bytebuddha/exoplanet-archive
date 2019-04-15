@@ -1,5 +1,5 @@
 # exoplanet-archive
-**WIP!** Small library for parsing data from [exoplanet archive API](https://exoplanetarchive.ipac.caltech.edu).
+**WIP!** Small **Unofficial** library for parsing data from [exoplanet archive API](https://exoplanetarchive.ipac.caltech.edu).
 Currently there is only a very simple uncomplete low level api. In the future there will be a much
 simpler High Level Api.
 
