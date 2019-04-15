@@ -10,7 +10,7 @@ is subject to change.
    required openssl be installed.
 
 ## Usage
-  - #### [Records](records)
+  - #### Records
      Records are the most basic representation of the exoplanet data. They
      implement the `ApiEndpoint` to retrieve data from the api.
      Here is an example of how to print the name of every 'Confirmed' exoplanet.
