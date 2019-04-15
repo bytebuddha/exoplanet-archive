@@ -1,9 +1,12 @@
 # exoplanets
 **WIP!** Small library for parsing data from [exoplanet archive API](https://exoplanetarchive.ipac.caltech.edu).
 Currently there is only a very simple uncomplete low level api. In the future there will be a much
-simpler High Level Api.  
+simpler High Level Api.
+
+**NOTE:** As a work in progress not all API's have been implemented yet and everything
+is subject to change.
 ## Requirements
-  - This library uses [native-tsl](https://crates.io/crates/native-tls) when fetching data, witch
+  - This library uses [native-tls](https://crates.io/crates/native-tls) when fetching data, witch
    required openssl be installed.
 
 ## Usage
