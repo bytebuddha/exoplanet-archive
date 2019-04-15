@@ -5,12 +5,41 @@ use crate::{Result, ApiEndpoint};
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct ConfirmedExoplanet {
 
+    /// ## Host star name.
+    ///
+    /// Stellar name most commonly used in the literature.
     pub pl_hostname: Option<String>,
+
+    /// ## PLanet Letter
+    ///
+    /// Letter assigned to the planetary component of a planetary system.
     pub pl_letter: Option<String>,
+
+    /// ## Planet Name
+    ///
+    /// Planet name most commonly used in the literature.
     pub pl_name: Option<String>,
+
+    /// ## Discovery Method
+    ///
+    /// Method by which the planet was first identified.
     pub pl_discmethod: Option<String>,
+
+    /// ## Controversial Flag
+    ///
+    /// Flag indicating whether the confirmation status of a planet has been
+    /// questioned in the published literature (1=yes, 0=no)
     pub pl_controvflag: Option<usize>,
+
+    /// ## Number of planets in System
+    ///
+    /// Number of planets in the planetary system.
     pub pl_pnum: Option<usize>,
+
+    /// ## Orbital Period (days)
+    ///
+    /// Time the planet takes to make a complete orbit around
+    /// the host star or system.
     pub pl_orbper: Option<f64>,
     pub pl_orbpererr1: Option<f64>,
     pub pl_orbpererr2: Option<f64>,
