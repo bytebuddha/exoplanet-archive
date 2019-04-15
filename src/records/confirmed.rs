@@ -382,3 +382,14 @@ impl ApiEndpoint for ConfirmedExoplanetRecord {
         Ok(serde_json::from_str(&data)?)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::records::ConfirmedExoplanetRecord;
+    use crate::records::ApiEndpoint;
+
+    #[test]
+    fn serialize_data() {
+        ConfirmedExoplanetRecord::load().unwrap();
+    }
+}

@@ -1,11 +1,12 @@
 # exoplanets
 **WIP!** Small library for parsing data from [exoplanet archive API](https://exoplanetarchive.ipac.caltech.edu).
-
+Currently there is only a very simple uncomplete low level api. In the future there will be a much
+simpler High Level Api.  
 ## Requirements
   - This library uses [native-tsl](https://crates.io/crates/native-tls) when fetching data, witch
    required openssl be installed.
 
-## Ussge
+## Usage
   - #### [Records](records)
      Records are the most basic representation of the exoplanet data. They
      implement the `ApiEndpoint` to retrieve data from the api.
@@ -30,7 +31,7 @@
      use exoplanets::records::ConfirmedExoplanets;
      
      fn main() {
-        let fields = "pl_name,pl_letter,pl_host";
+        let fields = "pl_hostname,pl_letter";
         ConfirmedExoplanetRecord::select(fields).unwrap();
          for planet in planets {
             println!("{:?}", planet.pl_name);

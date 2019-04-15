@@ -87,3 +87,14 @@ impl ApiEndpoint for MicrolensingExoplanetRecord {
         Ok(serde_json::from_str(&data)?)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::records::MicrolensingExoplanetRecord;
+    use crate::records::ApiEndpoint;
+
+    #[test]
+    fn serialize_data() {
+        MicrolensingExoplanetRecord::load().unwrap();
+    }
+}

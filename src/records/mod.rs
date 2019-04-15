@@ -34,6 +34,7 @@ pub trait ApiEndpoint: Sized {
     fn select(fields: &str) -> Result<serde_json::Value> {
         let url = format!("{}?table={}&select={}&format=json", Self::BASE_URL, Self::TABLE_NAME, fields);
         let data = reqwest::get(&url)?.text()?;
+        println!("{:?}", &data);
         Ok(serde_json::from_str(&data)?)
     }
 }
