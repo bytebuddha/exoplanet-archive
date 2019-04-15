@@ -79,7 +79,7 @@ pub struct MicrolensingExoplanetRecord {
     pub plntreflink: Option<String>
 }
 
-impl ApiEndpoint for MicrolensingExoplanet {
+impl ApiEndpoint for MicrolensingExoplanetRecord {
 
     const TABLE_NAME: &'static str = "microlensing";
 
