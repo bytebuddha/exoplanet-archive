@@ -1,5 +1,5 @@
 [package]
-name = "exoplanets"
+name = "exoplanet-archive"
 version = "0.1.0"
 authors = ["Patrick Greene <pmg41494@protonmail.com>"]
 edition = "2018"
