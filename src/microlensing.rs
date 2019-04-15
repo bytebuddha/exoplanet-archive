@@ -1,8 +1,9 @@
 use serde_derive::{ Serialize, Deserialize };
 
 use crate::Result;
+use crate::ApiEndpoint;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct MicrolensingExoplanet {
     pub plntname: Option<String>,
     pub ra_str: Option<String>,
@@ -77,14 +78,12 @@ pub struct MicrolensingExoplanet {
     pub mlmodeldef: Option<f64>,
     pub plntreflink: Option<String>
 }
-impl MicrolensingExoplanet {
 
-    pub fn get_url() -> String {
-        "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=microlensing&format=json".into()
-    }
+impl ApiEndpoint for MicrolensingExoplanet {
 
-    pub fn load() -> Result<Vec<MicrolensingExoplanet>> {
-        let data = reqwest::get(&Self::get_url())?.text()?;
+    const TABLE_NAME: &'static str = "microlensing";
+
+    fn handle_data(data: &str) -> Result<Vec<Self>> {
         Ok(serde_json::from_str(&data)?)
     }
 }

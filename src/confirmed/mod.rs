@@ -1,9 +1,10 @@
 use serde_derive::{ Serialize, Deserialize };
 use chrono::NaiveDate;
-use crate::Result;
+use crate::{Result, ApiEndpoint};
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct ConfirmedExoplanet {
+
     pub pl_hostname: Option<String>,
     pub pl_letter: Option<String>,
     pub pl_name: Option<String>,
@@ -93,15 +94,11 @@ pub struct ConfirmedExoplanet {
     pub pl_facility: Option<String>
 }
 
-impl ConfirmedExoplanet {
+impl ApiEndpoint for ConfirmedExoplanet {
 
-    pub fn get_url() -> String {
-        "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?table=exoplanets&format=json".into()
-    }
+    const TABLE_NAME: &'static str = "exoplanets";
 
-    pub fn load_all() -> Result<Vec<ConfirmedExoplanet>> {
-        let data = reqwest::get(&Self::get_url())?.text()?;
+    fn handle_data(data: &str) -> Result<Vec<Self>> {
         Ok(serde_json::from_str(&data)?)
     }
 }
-
