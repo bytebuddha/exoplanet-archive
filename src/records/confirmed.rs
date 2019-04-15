@@ -1,9 +1,10 @@
 use serde_derive::{ Serialize, Deserialize };
 use chrono::NaiveDate;
-use crate::{Result, ApiEndpoint};
+use crate::Result;
+use crate::records::ApiEndpoint;
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
-pub struct ConfirmedExoplanet {
+pub struct ConfirmedExoplanetRecord {
 
     /// ## Host star name.
     ///

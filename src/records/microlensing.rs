@@ -1,10 +1,10 @@
 use serde_derive::{ Serialize, Deserialize };
 
 use crate::Result;
-use crate::ApiEndpoint;
+use crate::records::ApiEndpoint;
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
-pub struct MicrolensingExoplanet {
+pub struct MicrolensingExoplanetRecord {
     pub plntname: Option<String>,
     pub ra_str: Option<String>,
     pub dec_str: Option<String>,
