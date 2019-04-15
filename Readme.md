@@ -1,4 +1,4 @@
-# exoplanets
+# exoplanet-archive
 **WIP!** Small library for parsing data from [exoplanet archive API](https://exoplanetarchive.ipac.caltech.edu).
 Currently there is only a very simple uncomplete low level api. In the future there will be a much
 simpler High Level Api.
@@ -15,9 +15,9 @@ is subject to change.
      implement the `ApiEndpoint` to retrieve data from the api.
      Here is an example of how to print the name of every 'Confirmed' exoplanet.
      ```rust
-     extern crate exoplanets;
+     extern crate exoplanet_archive;
  
-     use exoplanets::records::ConfirmedExoplanets;
+     use exoplanet_archive::records::ConfirmedExoplanets;
      
      fn main() {
          let planets = ConfirmedExoplanetRecord::load().unwrap();
@@ -29,9 +29,9 @@ is subject to change.
 
      Select only specific data fields.
      ```rust
-     extern crate exoplanets;
+     extern crate exoplanet_archive;
  
-     use exoplanets::records::ConfirmedExoplanets;
+     use exoplanet_archive::records::ConfirmedExoplanets;
      
      fn main() {
         let fields = "pl_hostname,pl_letter";

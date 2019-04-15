@@ -11,8 +11,8 @@
 //!     Records are the most basic representation of the exoplanet data. They
 //!     implement the `ApiEndpoint` to retrieve data from the api.
 //!     ```rust
-//!         use exoplanets::records::ApiEndpoint;
-//!         use exoplanets::records::ConfirmedExoplanetRecord;
+//!         use exoplanet_archive::records::ApiEndpoint;
+//!         use exoplanet_archive::records::ConfirmedExoplanetRecord;
 //!
 //!         let planets = ConfirmedExoplanetRecord::load().unwrap();
 //!         for planet in planets {
@@ -24,8 +24,8 @@
 //!     You can select the fields you would like to retrieve from the api using the select method.
 //!     It takes a comma seperated list of field names to retrieve from the server.
 //!     ```rust
-//!        use exoplanets::records::ApiEndpoint;
-//!        use exoplanets::records::ConfirmedExoplanetRecord;
+//!        use exoplanet_archive::records::ApiEndpoint;
+//!        use exoplanet_archive::records::ConfirmedExoplanetRecord;
 //!
 //!        let fields = "pl_name,pl_letter,pl_hostname";
 //!        ConfirmedExoplanetRecord::select(fields).unwrap();
