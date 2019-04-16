@@ -1,3 +1,6 @@
+//! The following table lists all of the data columns in the Microlensing Planets interactive table.
+//! More details on microlensing resources in the archive are listed on the Microlensing page.
+
 use serde_derive::{ Serialize, Deserialize };
 
 use crate::Result;
@@ -5,21 +8,37 @@ use crate::records::ApiEndpoint;
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct MicrolensingExoplanetRecord {
+
+    /// #### Planet Name
+    ///
+    /// Planet name most commonly used in literature.
     pub plntname: Option<String>,
+
+    /// #### RA [sexagesimal]
+    ///
+    /// Right ascension of the microlensing event, in sexagesimal format.
     pub ra_str: Option<String>,
+
+    /// #### Dec [sexagesimal]
+    ///
+    /// Declination of the microlensing event, in sexagesimal format
     pub dec_str: Option<String>,
+
+    /// #### Planet Mass [Jupiter mass]
+    ///
+    /// Mass of planet, in Jupiter masses
     pub mlmassplnj: Option<f64>,
-    pub mlmassplnjerr1: Option<f64>,
-    pub mlmassplnjerr2: Option<f64>,
-    pub mlmassplnjlim: Option<f64>,
+
+    /// #### Planet Mass [Earth mess]
+    ///
+    /// Mass of planet, in earth masses.
     pub mlmassplne: Option<f64>,
-    pub mlmassplneerr1:Option<f64>,
-    pub mlmassplneerr2:Option<f64>,
-    pub mlmassplnelim:Option<f64>,
-    pub mlsmaproj: Option<f64>,
-    pub mlsmaprojerr1: Option<f64>,
-    pub mlsmaprojerr2: Option<f64>,
     pub mlsmaprojlim: Option<f64>,
+
+    /// #### Planet-star Projected Semi-major Axis [AU]
+    ///
+    /// Projected physical separation of the planet and the
+    /// host star in the plane of the sky at the time of the event
     pub mlmasslens: Option<f64>,
     pub mlmasslenserr1: Option<f64>,
     pub mlmasslenserr2: Option<f64>,
